@@ -15,10 +15,11 @@ This tool helps you capture and analyze Android logcat output, which can be over
 adb devices
 ```
 
-### 2. Run the analyzer:
+### 2. Run the interactive analyzer (recommended for beginners):
 ```bash
 python logcat_analyzer.py
 ```
+
 
 ## Features
 
@@ -28,8 +29,9 @@ python logcat_analyzer.py
 - **Filter by tag**: Extract logs from specific app/component tags
 - **Search keywords**: Find specific text in logs
 - **Live stream**: View logcat in real-time
+- **Critical Issues Report**: Generates a comprehensive critical_report.txt
+- **App/Component Monitor**: Real-time monitoring of specific apps or components
 
-## Common Use Cases
 
 ### Find errors only:
 ```bash
