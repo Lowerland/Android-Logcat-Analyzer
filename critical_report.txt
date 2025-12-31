@@ -1,0 +1,117 @@
+================================================================================
+ANDROID LOGCAT - CRITICAL ISSUES REPORT
+================================================================================
+
+Analysis Date: 2025-12-31 14:26:04
+Source File: logcat.txt
+Total Errors: 109
+Total Warnings: 59
+
+================================================================================
+
+🚨 PRIORITY 1: MOST FREQUENT ERRORS
+--------------------------------------------------------------------------------
+  [20x] msys: E[N mns]_OnDiskCacheGetData(632)=>Start post callb
+  [20x] msys: E[N mns]_LogError(228)=>Failed to resolve using sy
+  [11x] MvfstCallbacks.cpp: onConnectionSetupError: error=TransportError: Inte
+  [7x] msgr.msys: E[S sync]_createResponseError(269)=>Network Respon
+  [7x] ANDR-PERF-RESOURCEQS: ANDR-PERF-RESOURCEQS: AddAndApply() 125: Resource 
+  [5x] OplusStorageUFSBandwidth: storage_io_metrics_path is /proc/oplus_storage/io_
+  [5x] OplusStorageUFSBandwidth: Alarm set to trigger in 10 seconds
+  [3x] OplusStorageUFSBandwidth: Bandwidth - Read: 0,00 MB/s, Write: 0,00 MB/s
+  [2x] ChargerInfo: SingleHyperPath not found
+  [2x] msgr.msys: E[N mns]_OnDiskCacheGetData(632)=>Start post callb
+
+⚠️  PRIORITY 2: COMPONENTS WITH MOST ERRORS
+--------------------------------------------------------------------------------
+   40 errors - msys
+   20 errors - OplusStorageUFSBandwidth
+   11 errors - MvfstCallbacks.cpp
+   11 errors - msgr.msys
+   10 errors - APS_ALOG
+    7 errors - ANDR-PERF-RESOURCEQS
+    4 errors - Thing-Network
+    4 errors - vendor.qti.bluetooth@1.1-wake_lock
+    2 errors - ChargerInfo
+
+📝 PRIORITY 3: UNIQUE ERROR MESSAGES (First 20)
+--------------------------------------------------------------------------------
+
+[12-31 14:24:51.267] msys
+  E[N mns]_OnDiskCacheGetData(632)=>Start post callback cache refresh DNS resolution
+
+[12-31 14:24:51.280] MvfstCallbacks.cpp
+  onConnectionSetupError: error=TransportError: Internal Error, Error on socket write Operation not permitted,
+
+[12-31 14:24:51.280] msys
+  E[N mns]_LogError(228)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+
+[12-31 14:24:51.324] ChargerInfo
+  SingleHyperPath not found
+
+[12-31 14:24:51.463] msgr.msys
+  E[S sync]_createResponseError(269)=>Network Response 63D7008F-D523-4A4A-9ACA-A0BF274829AF contains sync error Error Domain=dgw Code=2002 UserInfo=0xb4000074e7276040 {MCFErrorDirectLocalizedFailureReasonKey=StreamGroupNetworkRequest request cancelled: max retries reached; last err (Error Domain=MNSHTTPClient Code=3 UserInfo=0xb4000074b1fcf3c0 {MCFErrorDirectLocalizedFailureReasonKey=Host session was closed, num pending transactions: 1})} - Underlying error (null): Error Domain=dgw Code=2002 UserInfo=0xb4000074e7276040 {MCFErrorDirectLocalizedFailureReasonKey=StreamGroupNetworkRequest request cancelled: max retries reached; last err (Error Domain=MNSHTTPClient Code=3 UserInfo=0xb4000074b1fcf3c0 {MCFErrorDirectLocalizedFailureReasonKey=Host session was closed, num pending transactions: 1})}
+
+[12-31 14:24:51.472] msgr.msys
+  E[S sync]_createResponseError(269)=>Network Response F28C85A6-A673-428E-9572-85E1AE66EB6B contains sync error Error Domain=dgw Code=2002 UserInfo=0xb4000074d5610cc0 {MCFErrorDirectLocalizedFailureReasonKey=StreamGroupNetworkRequest request cancelled: max retries reached; last err (Error Domain=MNSHTTPClient Code=3 UserInfo=0xb4000074b1fcf3c0 {MCFErrorDirectLocalizedFailureReasonKey=Host session was closed, num pending transactions: 1})} - Underlying error (null): Error Domain=dgw Code=2002 UserInfo=0xb4000074d5610cc0 {MCFErrorDirectLocalizedFailureReasonKey=StreamGroupNetworkRequest request cancelled: max retries reached; last err (Error Domain=MNSHTTPClient Code=3 UserInfo=0xb4000074b1fcf3c0 {MCFErrorDirectLocalizedFailureReasonKey=Host session was closed, num pending transactions: 1})}
+
+[12-31 14:24:51.476] msgr.msys
+  E[N mns]_OnDiskCacheGetData(632)=>Start post callback cache refresh DNS resolution
+
+[12-31 14:24:51.487] msgr.msys
+  E[S sync]_createResponseError(269)=>Network Response 0258CB28-4FE7-4B6E-B358-566929FB8DE9 contains sync error Error Domain=dgw Code=2002 UserInfo=0xb40000749e2f5e80 {MCFErrorDirectLocalizedFailureReasonKey=StreamGroupNetworkRequest request cancelled: max retries reached; last err (Error Domain=MNSHTTPClient Code=3 UserInfo=0xb4000074b1fcf3c0 {MCFErrorDirectLocalizedFailureReasonKey=Host session was closed, num pending transactions: 1})} - Underlying error (null): Error Domain=dgw Code=2002 UserInfo=0xb40000749e2f5e80 {MCFErrorDirectLocalizedFailureReasonKey=StreamGroupNetworkRequest request cancelled: max retries reached; last err (Error Domain=MNSHTTPClient Code=3 UserInfo=0xb4000074b1fcf3c0 {MCFErrorDirectLocalizedFailureReasonKey=Host session was closed, num pending transactions: 1})}
+
+[12-31 14:24:51.497] msgr.msys
+  E[N mns]_LogError(228)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+
+[12-31 14:24:51.498] msgr.msys
+  E[S sync]_createResponseError(269)=>Network Response B76DB92D-6EBB-48FD-85FE-6C8EB38C2F66 contains sync error Error Domain=dgw Code=2002 UserInfo=0xb40000749e30db00 {MCFErrorDirectLocalizedFailureReasonKey=StreamGroupNetworkRequest request cancelled: max retries reached; last err (Error Domain=MNSHTTPClient Code=3 UserInfo=0xb4000074b1fcf3c0 {MCFErrorDirectLocalizedFailureReasonKey=Host session was closed, num pending transactions: 1})} - Underlying error (null): Error Domain=dgw Code=2002 UserInfo=0xb40000749e30db00 {MCFErrorDirectLocalizedFailureReasonKey=StreamGroupNetworkRequest request cancelled: max retries reached; last err (Error Domain=MNSHTTPClient Code=3 UserInfo=0xb4000074b1fcf3c0 {MCFErrorDirectLocalizedFailureReasonKey=Host session was closed, num pending transactions: 1})}
+
+[12-31 14:24:51.508] msgr.msys
+  E[S sync]_createResponseError(269)=>Network Response 62F92604-ABEB-4140-A864-65777DF68E5A contains sync error Error Domain=dgw Code=2002 UserInfo=0xb40000749e34b580 {MCFErrorDirectLocalizedFailureReasonKey=StreamGroupNetworkRequest request cancelled: max retries reached; last err (Error Domain=MNSHTTPClient Code=3 UserInfo=0xb4000074b1fcf3c0 {MCFErrorDirectLocalizedFailureReasonKey=Host session was closed, num pending transactions: 1})} - Underlying error (null): Error Domain=dgw Code=2002 UserInfo=0xb40000749e34b580 {MCFErrorDirectLocalizedFailureReasonKey=StreamGroupNetworkRequest request cancelled: max retries reached; last err (Error Domain=MNSHTTPClient Code=3 UserInfo=0xb4000074b1fcf3c0 {MCFErrorDirectLocalizedFailureReasonKey=Host session was closed, num pending transactions: 1})}
+
+[12-31 14:24:51.515] msgr.msys
+  E[S sync]_createResponseError(269)=>Network Response F99AC43C-3613-4CDE-961D-0D0A01E82DE8 contains sync error Error Domain=dgw Code=2002 UserInfo=0xb40000749e34bfc0 {MCFErrorDirectLocalizedFailureReasonKey=StreamGroupNetworkRequest request cancelled: max retries reached; last err (Error Domain=MNSHTTPClient Code=3 UserInfo=0xb4000074b1fcf3c0 {MCFErrorDirectLocalizedFailureReasonKey=Host session was closed, num pending transactions: 1})} - Underlying error (null): Error Domain=dgw Code=2002 UserInfo=0xb40000749e34bfc0 {MCFErrorDirectLocalizedFailureReasonKey=StreamGroupNetworkRequest request cancelled: max retries reached; last err (Error Domain=MNSHTTPClient Code=3 UserInfo=0xb4000074b1fcf3c0 {MCFErrorDirectLocalizedFailureReasonKey=Host session was closed, num pending transactions: 1})}
+
+[12-31 14:24:51.523] msgr.msys
+  E[S sync]_createResponseError(269)=>Network Response 115683AC-E16B-4E0A-91EC-391667B00F18 contains sync error Error Domain=dgw Code=2002 UserInfo=0xb40000749e3b7380 {MCFErrorDirectLocalizedFailureReasonKey=StreamGroupNetworkRequest request cancelled: max retries reached; last err (Error Domain=MNSHTTPClient Code=3 UserInfo=0xb4000074b1fcf3c0 {MCFErrorDirectLocalizedFailureReasonKey=Host session was closed, num pending transactions: 1})} - Underlying error (null): Error Domain=dgw Code=2002 UserInfo=0xb40000749e3b7380 {MCFErrorDirectLocalizedFailureReasonKey=StreamGroupNetworkRequest request cancelled: max retries reached; last err (Error Domain=MNSHTTPClient Code=3 UserInfo=0xb4000074b1fcf3c0 {MCFErrorDirectLocalizedFailureReasonKey=Host session was closed, num pending transactions: 1})}
+
+[12-31 14:24:51.740] OplusStorageUFSBandwidth
+  storage_io_metrics_path is /proc/oplus_storage/io_metrics/forever/
+
+[12-31 14:24:51.742] OplusStorageUFSBandwidth
+  Bandwidth - Read: 0,50 MB/s, Write: 0,00 MB/s
+
+[12-31 14:24:51.742] OplusStorageUFSBandwidth
+  Task time: 2ms
+
+[12-31 14:24:51.748] OplusStorageUFSBandwidth
+  Alarm set to trigger in 10 seconds
+
+[12-31 14:24:51.945] ANDR-PERF-RESOURCEQS
+  ANDR-PERF-RESOURCEQS: AddAndApply() 125: Resource with major=16, minor=0 not supported
+
+[12-31 14:24:52.628] Thing-Network
+  send udp error
+
+[12-31 14:24:52.628] Thing-Network
+  error code 1,msg: Operation not permitted
+
+⚡ WARNING SUMMARY
+--------------------------------------------------------------------------------
+   22 warnings - ULELite
+   11 warnings - PantaCard.SysUi.SeedlingCard
+   11 warnings - LibevQuicAsyncUDPSocket.h
+   10 warnings - RTCDGWService.cpp
+    3 warnings - OPLUS_LOG_LOAD
+    1 warnings - SystemUi--Keyguard
+    1 warnings - OplusFeedbackInfo
+
+💡 RECOMMENDATIONS
+--------------------------------------------------------------------------------
+1. Focus on components with repeated errors
+2. Check network connectivity (DNS resolution failures)
+3. Verify app permissions for socket operations
+4. Review system resource configurations
+
+================================================================================
